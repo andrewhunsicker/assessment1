@@ -1,26 +1,15 @@
 const readline = require('readline');
 
-const rl = readline.createInterface({
+const reader = readline.createInterface({
   input: process.stdin,
   output: process.stdout
 });
-rl.question(`what is the password?`),
-
-
+console.log(`Hello there user`)
+reader.question(`what is the password?`, function(answer){
+  if(answer.length >= 10){console.log(`you are a success`)
+}else{
+  console.log(`that was a failure`)
+}
+reader.close()
+})
  
-
-
-function CheckPassword(inputtxt) 
-{ 
-var passw=  /^[A-Za-z]\w{10,15}$/;
-if(inputtxt.value.match(passw)) 
-{ 
-alert('Correct, try another...')
-return true;
-}
-else
-{ 
-alert('Wrong...!')
-return false;
-}
-}
