@@ -4,7 +4,7 @@ const reader = readline.createInterface({
   input: process.stdin,
   output: process.stdout
 });
-console.log(`Hello there user`)
+console.log(`Hello there user`) 
 reader.question(`what is the password?`, function(answer){
   if(answer.length >= 10){console.log(`you are a success`)
 }else{
